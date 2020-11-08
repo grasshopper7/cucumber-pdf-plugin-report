@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 import io.cucumber.junit.CucumberOptions;*/
 
 //@RunWith(Cucumber.class)
-@CucumberOptions(plugin = { "json:target/cucumber-json.json", "summary" }/* , tags = "@scen or @tabledoc" */)
+@CucumberOptions(plugin = { "json:target/report/cucumber-json.json", "summary" }/* , tags = "@scen or @tabledoc" */)
 public class RunCukeIT extends AbstractTestNGCucumberTests {
 
 	/*

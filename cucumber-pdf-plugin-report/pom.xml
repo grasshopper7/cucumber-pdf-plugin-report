@@ -77,7 +77,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<cucumberJsonReportDirectory>${project.build.directory}</cucumberJsonReportDirectory>
+					<cucumberJsonReportDirectory>${project.build.directory}/report</cucumberJsonReportDirectory>
 					<cucumberPdfReportDirectory>pdf-report</cucumberPdfReportDirectory>
 					<strictCucumber6Behavior>true</strictCucumber6Behavior>
 				</configuration>
