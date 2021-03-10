@@ -31,7 +31,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Stepdefs {
 
 	private Scenario scenario;
-	
+
 	@Given("Hello background")
 	public void backgrond() {
 	}
@@ -39,13 +39,13 @@ public class Stepdefs {
 	@Before(value = "not @failure")
 	public void before() throws InterruptedException {
 		Thread.sleep(100);
-		//System.out.println("BEFORE HOOK");
+		// System.out.println("BEFORE HOOK");
 	}
 
 	@After(value = "not @failure")
 	public void after() throws InterruptedException {
 		Thread.sleep(200);
-		//System.out.println("AFTER HOOK");
+		// System.out.println("AFTER HOOK");
 	}
 
 	@BeforeStep
@@ -57,10 +57,9 @@ public class Stepdefs {
 	public void afterStep() throws InterruptedException {
 		Thread.sleep(200);
 	}
-	
+
 	@Before(value = "@failure")
 	public void beforeFailure(Scenario scenario) { //
-		System.out.println("Before failure");
 		this.scenario = scenario;
 		scenario.log("FAILURE HI");
 		scenario.log("FAILURE HELLO");
@@ -69,7 +68,6 @@ public class Stepdefs {
 
 	@After(value = "@failure")
 	public void afterFailure() { //
-		System.out.println("After failure");
 		scenario.log("FAILURE HI");
 		scenario.log("FAILURE HELLO");
 		throw new RuntimeException();
@@ -88,7 +86,6 @@ public class Stepdefs {
 		Thread.sleep(250);
 	}
 
-
 	@Given("{string} background")
 	public void background(String type) {
 		System.out.format("%s type background. \n", type);
@@ -98,7 +95,8 @@ public class Stepdefs {
 	@When("Complete action in {string} step in {string}")
 	@Then("Validate the outcome in {string} step in {string}")
 	public void step(String step, String scenario) throws InterruptedException {
-		//System.out.format("%s step from %s.\n", step.toUpperCase(), scenario.toUpperCase());
+		// System.out.format("%s step from %s.\n", step.toUpperCase(),
+		// scenario.toUpperCase());
 		Thread.sleep(500);
 	}
 
@@ -117,12 +115,10 @@ public class Stepdefs {
 
 	@Given("Customer orders the dishes")
 	public void dataTable(List<List<String>> table) {
-		System.out.println(table);
 	}
 
 	@Given("the doc string is")
 	public void docStr(String docStr) {
-		System.out.println(docStr);
 	}
 
 	private WebDriver driver;
@@ -154,10 +150,9 @@ public class Stepdefs {
 		scenario.attach(screenshot, "image/png", this.site);
 		driver.quit();
 	}
-	
-	
+
 	@Given("Pending step definition methods")
 	public void pending_step_definition_methods() {
-	    throw new PendingException();
+		throw new PendingException();
 	}
 }

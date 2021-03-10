@@ -1,4 +1,4 @@
-@website
+@website @skip
 Feature: Screenshots
 
   Scenario: Scenario screenshot GIT
