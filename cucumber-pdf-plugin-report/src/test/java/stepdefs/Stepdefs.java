@@ -9,8 +9,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.SkipException;
 
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
@@ -148,11 +148,24 @@ public class Stepdefs {
 		// scenario.embed(screenshot, "image/png", this.site);
 		// scenario.embed(screenshot, "image/png");
 		scenario.attach(screenshot, "image/png", this.site);
+		scenario.log("	first log");
+		scenario.log("second log second log");
+		scenario.log("third log third log third log");
+		scenario.log("fourth log fourth log fourth log fourth log");
+		scenario.log("fifth log fifth log fifth log fifth log fifth log");
+		scenario.log("sixth log sixth log sixth log sixth log sixth log sixth log");
+		scenario.log(
+				"	seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log seventh log");
 		driver.quit();
 	}
 
-	@Given("Pending step definition methods")
+	@Given("Pending step definition")
 	public void pending_step_definition_methods() {
 		throw new PendingException();
+	}
+
+	@Given("Skipped step definition")
+	public void skippedStep() {
+		throw new SkipException("SKip it");
 	}
 }

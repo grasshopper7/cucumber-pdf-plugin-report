@@ -8,11 +8,13 @@ Feature: DataTable And DocString
   Scenario: DataTable Scenario
     Given Customer orders the dishes
       | one cell Customer orders the dishes | two cell | three cell | four cell | five cell | six cell | seven cell | eight cell | nine cell | ten cell | eleven cell | twelve cell | thirteen cell | fourteen cell | fifteen cell |
-      |        1 |        2 |          3 |         4 |         5 |        6 |          7 |          8 |         9 |       10 |          11 |          12 |            13 |            14 |           15 |
-      |        1 |        2 |          3 |         4 |         5 |        6 |          7 |          8 |         9 |       10 |          11 |          12 |            13 |            14 |           15 |
-      |        1 |        2 |          3 |         4 |         5 |        6 |          7 |          8 |         9 |       10 |          11 |          12 |            13 |            14 |           15 |
-      |        1 |        2 |          3 |         4 |         5 |        6 |          7 |          8 |         9 |       10 |          11 |          12 |            13 |            14 |           15 |
-      |        1 |        2 |          3 |         4 |         5 |        6 |          7 |          8 |         9 |       10 |          11 |          12 |            13 |            14 |           15 |
+      |                                   1 |        2 |          3 |         4 |         5 |        6 |          7 |          8 |         9 |       10 |          11 |          12 |            13 |            14 |           15 |
+      |                                   1 |        2 |          3 |         4 |         5 |        6 |          7 |          8 |         9 |       10 |          11 |          12 |            13 |            14 |           15 |
+      |                                   1 |        2 |          3 |         4 |         5 |        6 |          7 |          8 |         9 |       10 |          11 |          12 |            13 |            14 |           15 |
+      |                                   1 |        2 |          3 |         4 |         5 |        6 |          7 |          8 |         9 |       10 |          11 |          12 |            13 |            14 |           15 |
+      |                                   1 |        2 |          3 |         4 |         5 |        6 |          7 |          8 |         9 |       10 |          11 |          12 |            13 |            14 |           15 |
+      |                                   1 |        2 |          3 |         4 |         5 |        6 |          7 |          8 |         9 |       10 |          11 |          12 |            13 |            14 |           15 |
+      |                                   1 |        2 |          3 |         4 |         5 |        6 |          7 |          8 |         9 |       10 |          11 |          12 |            13 |            14 |           15 |
 
   Scenario: Doc String to Custom Object
     Given the doc string is
