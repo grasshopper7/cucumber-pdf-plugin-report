@@ -7,9 +7,9 @@ import io.cucumber.testng.CucumberOptions;
 import io.cucumber.junit.CucumberOptions;*/
 
 //@RunWith(Cucumber.class)
-@CucumberOptions(plugin = { "json:target/cucumber-json.json", "summary" }/* , tags = "@exception" */)
+@CucumberOptions(plugin = { "json:target/cucumber-json.json", "summary" }/* , tags = "@both" */)
 public class RunCukeIT extends AbstractTestNGCucumberTests {
- 
+
 	/*
 	 * @DataProvider(parallel = true) public Object[][] scenarios() { return
 	 * super.scenarios(); }
