@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 import io.cucumber.junit.CucumberOptions;*/
 
 //@RunWith(Cucumber.class)
-@CucumberOptions(plugin = { "json:target/cucumber-json.json", "summary" }/* , tags = "@both" */)
+@CucumberOptions(plugin = { "json:target/cucumber-json.json", "summary" }/* , tags = "@website" */)
 public class RunCukeIT extends AbstractTestNGCucumberTests {
 
 	/*

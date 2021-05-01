@@ -36,18 +36,13 @@ public class Stepdefs {
 	public void backgrond() {
 	}
 
-	@Before(value = "not @failure")
-	public void before() throws InterruptedException {
-		Thread.sleep(100);
-		// System.out.println("BEFORE HOOK");
-	}
-
-	@After(value = "not @failure")
-	public void after() throws InterruptedException {
-		Thread.sleep(200);
-		// System.out.println("AFTER HOOK");
-	}
-
+	/*
+	 * @Before(value = "not @failure") public void before() throws
+	 * InterruptedException { Thread.sleep(100); // }
+	 * 
+	 * @After(value = "not @failure") public void after() throws
+	 * InterruptedException { Thread.sleep(100); // }
+	 */
 	@BeforeStep
 	public void beforeStep() throws InterruptedException {
 		Thread.sleep(100);
@@ -55,7 +50,7 @@ public class Stepdefs {
 
 	@AfterStep
 	public void afterStep() throws InterruptedException {
-		Thread.sleep(200);
+		Thread.sleep(100);
 	}
 
 	@Before(value = "@failure")
@@ -133,7 +128,7 @@ public class Stepdefs {
 		Thread.sleep(3000);
 	}
 
-	@BeforeStep(value = "@website")
+	@Before(value = "@website")
 	public void beforeSite(Scenario scenario) {
 		this.scenario = scenario;
 		WebDriverManager.chromedriver().setup();
@@ -141,13 +136,14 @@ public class Stepdefs {
 		driver.manage().window().maximize();
 	}
 
-	@AfterStep(value = "@website")
+	@After(value = "@website")
 	public void afterSite() {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		byte[] screenshot = ts.getScreenshotAs(OutputType.BYTES);
 		// scenario.embed(screenshot, "image/png", this.site);
 		// scenario.embed(screenshot, "image/png");
 		scenario.attach(screenshot, "image/png", this.site);
+
 		scenario.log("	first log");
 		scenario.log("second log second log");
 		scenario.log("third log third log third log");
