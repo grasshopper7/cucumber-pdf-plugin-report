@@ -4,7 +4,8 @@ skipColor: a89132
 displayFeature: true
 displayScenario: true
 displayDetailed: true
-displayExpanded: true
+displayExpanded: false
+displayAttached: true
 
 summaryConfig:
    title: Grasshopper PDF Report

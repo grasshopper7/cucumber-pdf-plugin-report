@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>tech.grasshopper</groupId>
 	<artifactId>cucumber-pdf-plugin-report</artifactId>
-	<version>1.4.4</version>
+	<version>1.5.0</version>
 
 	<properties>
 		<project.reporting.outputEncoding>UTF-8
@@ -12,7 +12,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
 
-		<cucumber.version>6.10.4</cucumber.version>
+		<cucumber.version>7.2.3</cucumber.version>
 	</properties>
 
 	<dependencies>
@@ -68,7 +68,7 @@
 			<plugin>
 				<groupId>tech.grasshopper</groupId>
 				<artifactId>cucumber-pdf-plugin</artifactId>
-				<version>1.4.4</version>
+				<version>1.5.0</version>
 				<executions>
 					<execution>
 						<id>report</id>
