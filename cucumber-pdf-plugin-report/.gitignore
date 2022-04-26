@@ -2,13 +2,10 @@
 
 /test-output/
 
-
 /.settings/
-
-
 
 /.classpath
 
-
-
 /.project
+
+/reports*
