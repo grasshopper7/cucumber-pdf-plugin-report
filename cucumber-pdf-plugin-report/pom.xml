@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>tech.grasshopper</groupId>
 	<artifactId>cucumber-pdf-plugin-report</artifactId>
-	<version>1.6.0</version>
+	<version>1.8.0</version>
 
 	<properties>
 		<project.reporting.outputEncoding>UTF-8
@@ -68,7 +68,7 @@
 			<plugin>
 				<groupId>tech.grasshopper</groupId>
 				<artifactId>cucumber-pdf-plugin</artifactId>
-				<version>1.6.0</version>
+				<version>1.8.0</version>
 				<executions>
 					<execution>
 						<id>report</id>
@@ -81,8 +81,13 @@
 				<configuration>
 					<cucumberJsonReportDirectory>${project.build.directory}
 					</cucumberJsonReportDirectory>
-					<cucumberPdfReportDirectory>pdf-report</cucumberPdfReportDirectory>
-					<strictCucumber6Behavior>true</strictCucumber6Behavior>
+					<title>Cucumber PDF Maven Plugin Report</title>
+					<titleColor>7FFFD4</titleColor>
+					<!-- <passColor>000080</passColor> <failColor>C8A2C8</failColor> -->
+					<!-- <displayDetailed>false</displayDetailed> -->
+
+					<!-- <cucumberPdfReportDirectory>mounish</cucumberPdfReportDirectory> -->
+					<!-- <strictCucumber6Behavior>true</strictCucumber6Behavior> -->
 				</configuration>
 			</plugin>
 		</plugins>
