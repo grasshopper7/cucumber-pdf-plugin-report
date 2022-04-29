@@ -11,6 +11,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.SkipException;
 
 import io.cucumber.java.After;
@@ -85,7 +86,7 @@ public class Stepdefs {
 
 	@Given("{string} background")
 	public void background(String type) {
-		System.out.format("%s type background. \n", type);
+		//System.out.format("%s type background. \n", type);
 	}
 
 	@Given("Write a {string} step with precondition in {string}")
@@ -130,7 +131,7 @@ public class Stepdefs {
 		Thread.sleep(3000);
 	}
 
-	@Before(value = "@website")
+	@Before(value = "@website or @twoimg")
 	public void beforeSite(Scenario scenario) {
 		this.scenario = scenario;
 		WebDriverManager.chromedriver().setup();
@@ -138,7 +139,7 @@ public class Stepdefs {
 		driver.manage().window().maximize();
 	}
 
-	@After(value = "@website")
+	@After(value = "@website or @twoimg")
 	public void afterSite() {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		byte[] screenshot = ts.getScreenshotAs(OutputType.BYTES);
@@ -165,5 +166,21 @@ public class Stepdefs {
 	@Given("Skipped step definition")
 	public void skippedStep() {
 		throw new SkipException("SKip it");
+	}
+
+	@Given("Go to capture 2 images in one step")
+	public void twoImages() throws Exception {
+
+		driver.get("https://github.com/");
+		Thread.sleep(500);
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		byte[] screenshot = ts.getScreenshotAs(OutputType.BYTES);
+		scenario.attach(screenshot, "image/png", "github");
+
+		driver.get("https://stackoverflow.com/");
+		Thread.sleep(500);
+		ts = (TakesScreenshot) driver;
+		screenshot = ts.getScreenshotAs(OutputType.BYTES);
+		scenario.attach(screenshot, "image/png", "stackoverflow");
 	}
 }
