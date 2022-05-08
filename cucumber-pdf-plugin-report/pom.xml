@@ -54,7 +54,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-failsafe-plugin</artifactId>
-				<version>3.0.0-M4</version>
+				<version>3.0.0-M5</version>
 				<executions>
 					<execution>
 						<goals>
@@ -81,12 +81,12 @@
 				<configuration>
 					<cucumberJsonReportDirectory>${project.build.directory}
 					</cucumberJsonReportDirectory>
-					<title>Cucumber PDF Maven Plugin Report</title>
-					<titleColor>7FFFD4</titleColor>
-					<!-- <passColor>000080</passColor> <failColor>C8A2C8</failColor> -->
-					<!-- <displayDetailed>false</displayDetailed> -->
+					<!-- <cucumberPdfReportDirectory>secret</cucumberPdfReportDirectory> 
+						<cucumberPdfReportDirectoryTimeStamp>d M yy H m s </cucumberPdfReportDirectoryTimeStamp> 
+						<title>X Files Report</title> <titleColor>7FFFD4</titleColor> <passColor>00008B</passColor> 
+						<failColor>964B00</failColor> <skipColor>FFA500</skipColor> <displayFeature>true</displayFeature> 
+						<displayScenario>true</displayScenario> <displayDetailed>true</displayDetailed> -->
 
-					<!-- <cucumberPdfReportDirectory>mounish</cucumberPdfReportDirectory> -->
 					<!-- <strictCucumber6Behavior>true</strictCucumber6Behavior> -->
 				</configuration>
 			</plugin>

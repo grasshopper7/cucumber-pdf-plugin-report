@@ -4,11 +4,10 @@ skipColor: a89132
 displayFeature: true
 displayScenario: true
 displayDetailed: true
-displayExpanded: false
 displayAttached: true
 
-summaryConfig:
-   title: Grasshopper PDF Report
+dashboardConfig:
+   title: Cucumber PDF Report
    dataBackgroundColor: 4F0CC8
    titleColor: FF0000
    dateColor: 969696
@@ -20,6 +19,13 @@ summaryConfig:
       badColor: f768a1
       averageColor: 93ffff
       goodColor: 32ecab
+      
+summaryConfig:
+   totalColor: FF0000
+   durationColor: FF0000
+   
+tagConfig:
+   totalColor: FF0000
    
 featureConfig:
    totalColor: FF0000
@@ -53,7 +59,9 @@ detailedScenarioConfig:
    
 detailedStepHookConfig:
    stepTextColor: 0000FF
+   stepBackgroundColor: FFFFFF
    hookTextColor: 00FF00
+   hookBackgroundColor: FFFFFF
    durationColor: FF0000
    errorMsgColor: 000000
    logMsgColor: 000000
