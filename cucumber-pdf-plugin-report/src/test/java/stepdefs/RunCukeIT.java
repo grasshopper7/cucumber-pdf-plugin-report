@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;*/
 
 //@RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/stepdefs/", plugin = { "json:target/cucumber-json.json",
-		"summary" }/* , tags = "@tabledoc or @exception" */)
+		"summary" }, tags = "@twoimg")
 public class RunCukeIT extends AbstractTestNGCucumberTests {
 
 	/*

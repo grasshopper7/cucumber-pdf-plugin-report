@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>tech.grasshopper</groupId>
 	<artifactId>cucumber-pdf-plugin-report</artifactId>
-	<version>1.9.1</version>
+	<version>1.11.0</version>
 
 	<properties>
 		<project.reporting.outputEncoding>UTF-8
@@ -68,7 +68,7 @@
 			<plugin>
 				<groupId>tech.grasshopper</groupId>
 				<artifactId>cucumber-pdf-plugin</artifactId>
-				<version>1.9.1</version>
+				<version>1.11.0</version>
 				<executions>
 					<execution>
 						<id>report</id>
@@ -81,11 +81,16 @@
 				<configuration>
 					<cucumberJsonReportDirectory>${project.build.directory}
 					</cucumberJsonReportDirectory>
+
 					<!-- <cucumberPdfReportDirectory>secret</cucumberPdfReportDirectory> 
 						<cucumberPdfReportDirectoryTimeStamp>d M yy H m s </cucumberPdfReportDirectoryTimeStamp> 
 						<title>X Files Report</title> <titleColor>7FFFD4</titleColor> <passColor>00008B</passColor> 
 						<failColor>964B00</failColor> <skipColor>FFA500</skipColor> <displayFeature>true</displayFeature> 
-						<displayScenario>true</displayScenario> <displayDetailed>true</displayDetailed> -->
+						<displayScenario>true</displayScenario> <displayDetailed>true</displayDetailed> 
+						<displayAttached>true</displayAttached> <displayExpanded>false</displayExpanded> -->
+
+					<!-- <skipHooks>false</skipHooks> <skipScenarioHooks>false</skipScenarioHooks> 
+						<skipStepHooks>false</skipStepHooks> -->
 
 					<!-- <strictCucumber6Behavior>true</strictCucumber6Behavior> -->
 				</configuration>
