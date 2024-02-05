@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>tech.grasshopper</groupId>
 	<artifactId>cucumber-pdf-plugin-report</artifactId>
-	<version>1.13.0</version>
+	<version>1.14.0</version>
 
 	<properties>
 		<project.reporting.outputEncoding>UTF-8
@@ -13,6 +13,7 @@
 		<project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
 
 		<cucumber.version>7.7.0</cucumber.version>
+		<empty.property>null</empty.property>
 	</properties>
 
 	<dependencies>
@@ -81,9 +82,8 @@
 					</execution>
 				</executions>
 				<configuration>
-					<cucumberJsonReportDirectory>${project.build.directory}
-					</cucumberJsonReportDirectory>
-
+					<cucumberJsonReportDirectory>${project.build.directory}</cucumberJsonReportDirectory>
+					<cucumberPdfReportDirectoryTimeStamp>${empty.property}</cucumberPdfReportDirectoryTimeStamp>
 					<!-- <cucumberPdfReportDirectory>secret</cucumberPdfReportDirectory> 
 						<cucumberPdfReportDirectoryTimeStamp>d M yy H m s </cucumberPdfReportDirectoryTimeStamp> 
 						<title>X Files Report</title> <titleColor>7FFFD4</titleColor> <passColor>00008B</passColor> 

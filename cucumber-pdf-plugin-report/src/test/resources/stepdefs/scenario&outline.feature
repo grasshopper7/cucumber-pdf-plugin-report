@@ -22,6 +22,10 @@ Feature: Scenario And Scenario Outline
       | Scenario Outline One |     400 |
       | Scenario Outline Two |     600 |
 
+  # fails with NoSuchElementException
+  # Scenario Scenario Empty
+  # No steps
+
   @scen
   Scenario: Scenario Number Seven Seven Seven
     Scenario Description
